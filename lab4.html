@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Learning Dashboard</title>
+    <title>Trang cá nhân</title>
     <link rel="stylesheet" href="lab4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -23,167 +25,113 @@
             </nav>
         </div>
     </header>
-<!-- nav-tabs -->
-<section>
-    <nav>
-        <ul class="nav-tabs">
-            <li class="active-tab">Business Operations</li>
-            <li><a href="lab4_1.html">Cloud Computing</a></li>
-            <li><a href="lab4_2.html">Cybersecurity</a></li>
-            <li><a href="lab4_3.html">Data Science</a></li>
-            <li><a href="lab4_4.html">Development</a></li>
-            <li><a href="lab4_5.html">IT Operations</a></li>
-            <li><a href="lab4_6.html">Language Learning</a></li>
-           
-        </ul>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-arrow-left"></i> <li><a href="index.html">Trang Chủ</a></li>
+                <a href="lab4_1.html" class="sidebar-link"><i class="lni lni-exit"></i> Page Up</a>
+            </a>
+            <span class="navbar-text mx-auto">
+                MuleSoft 4.X Complete Guide For Beginners - Hands On Projects
+            </span>
+            <div class="d-flex">
+                <a class="nav-link" href="#"><i class="fas fa-star"></i> Leave a rating</a>
+                <a class="nav-link" href="#"><i class="fas fa-trophy"></i> Your progress</a>
+                <a class="nav-link" href="#"><i class="fas fa-share"></i> Share</a>
+                <a class="nav-link" href="#"><i class="fas fa-ellipsis-v"></i></a>
+            </div>
+        </div>
     </nav>
 
-    
-    <div class="welcome-section">
-        <div class="profile-pic"></div>
-        <div class="welcome-text">
-            <h2>Welcome back, Luong Hoai Sang</h2>
-            <a href="#">Add occupation and interests</a>
-        </div>
-    </div>
-</section>
+    <div class="wrapper d-flex">
+        <aside id="sidebar" class="expand bg-light">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Nhấn vào đây để thu nhỏ</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav list-unstyled">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false">
+                        <i class="lni lni-folder"></i> Course content <span class="badge bg-secondary">0 / 2 | 21min</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown collapse">
+                        <li class="sidebar-item"><a href="#" class="sidebar-link"><input type="checkbox"/> 2. Integration introduction <span class="badge bg-secondary">8min</span></a></li>
+                        <li class="sidebar-item"><a href="#" class="sidebar-link"><input type="checkbox"/> 3. Integration introduction <span class="badge bg-secondary">4min</span></a></li>
+                        <li class="sidebar-item"><a href="#" class="sidebar-link"><input type="checkbox"/> 4. Integration introduction <span class="badge bg-secondary">4min</span></a></li>
+                        <li class="sidebar-item"><a href="#" class="sidebar-link"><button class="btn btn-outline-secondary">Resource</button></a></li>
+                    </ul>
+                </li>
+                <!-- Additional sections would go here in a similar format -->
+            </ul>      
+            </div>
+        </aside>
 
-<!-- Weekly Streak Section -->
-<section class="weekly-streak">
-    <h3>Weekly streak</h3>
-    <p>One ring down, one to go. Keep it up!</p>
-    <div class="streak-details">
-       
-    </div>
-</section>
+        <main class="main p-3">
+            <div class="video-section">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YE7VzlLtp-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
 
-<!-- Main Section with Tabs -->
-<main>
-    <!-- Tabs for switching between sections -->
-    <div class="tab-container">
-        <ul class="tab-list">
-            <li class="tab-item active" data-tab="courses">Courses</li>
-            <li class="tab-item active" data-tab="learning-paths">Learning Paths</li>
-            <li class="tab-item active" data-tab="certifications">Certification Preparation</li>
-        </ul>
-
-        <!-- Courses Section -->
-        <section id="courses" class="tab-content active">
-            <h3>Pick up where you left off</h3>
-            <div class="course-list">
-                <div class="course-card">
-                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 080821.png" alt="Ảnh chụp màn hình 2024-10-19 080821.png">
-                    <h4>Lập Trình Cho Người Mới</h4>
-                    <p>Lecture • 1m</p>
-                    <div class="course-actions">
-                        <a href="#" class="download-btn">Download Video</a>
-                        <a href="#" class="download-btn">Download Document</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><i class="fas fa-search"></i></a>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Overview</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Q&A</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Notes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Announcements</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Learning tools</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="course-card">
-                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 081255.png" alt="Course 2">
-                    <h4>Học Lập Trình Cùng Giảng Viên</h4>
-                    <p>Lecture • 6m left</p>
-                    <div class="course-actions">
-                        <a href="#" class="download-btn">Download Video</a>
-                        <a href="#" class="download-btn">Download Document</a>
+            </nav>
+
+            <div class="container mt-3">
+                <div class="row course-header">
+                    <div class="col-12">
+                        <h1>Big Buck Bunny</h1>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                            <span>(4,705 ratings)</span>
+                            <span>26,379 Students</span>
+                            <span>50.5 hours</span>
+                        </div>
+                        <div class="details">
+                            <p><i class="fas fa-calendar-alt"></i> Last updated November 2023</p>
+                            <p><i class="fas fa-globe"></i> English <span>English [Auto], French [Auto], <a href="#">5 more</a></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row course-content">
+                    <div class="col-12">
+                        <h2>What you'll learn</h2>
+                        <ul class="row">
+                            <li class="col-md-6"><i class="fas fa-check"></i> You will become an expert in Mule ESB, Anypoint platform operations, MUnit and DevOps with Mule.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> This course teaches you Mule 4.x in depth including all the phases of SDLC.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> Step by step coding in detail explanation.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> You will feel real-time hands-on experience after finishing this course.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> You should be able to set up MuleSoft by your own for your organization.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> The course will keep on being added with new topics from MuleSoft.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> You should be able to develop, design, manage projects.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> One course destination to learn all the actions of real-time projects.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> Mule Level 1, Level 2 and Integration Associate.</li>
+                            <li class="col-md-6"><i class="fas fa-check"></i> Mule real-time project of this course helps you to...</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        Learning Paths Section
-        <section id="learning-paths" class="tab-content">
-            <h3>welcome to learning-paths</h3>
-            <div class="course-list">
-                <div class="course-card">
-                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 080821.png" alt="Ảnh chụp màn hình 2024-10-19 080821.png">
-                    <h4>Lập Trình Cho Người Mới</h4>
-                    <p>Lecture • 1m</p>
-                    <div class="course-actions">
-                        <a href="#" class="download-btn">Download Video</a>
-                        <a href="#" class="download-btn">Download Document</a>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 081255.png" alt="Course 2">
-                    <h4>Học Lập Trình Cùng Giảng Viên</h4>
-                    <p>Lecture • 6m left</p>
-                    <div class="course-actions">
-                        <a href="#" class="download-btn">Download Video</a>
-                        <a href="#" class="download-btn">Download Document</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-
-        <!-- Certification Preparation Section -->
-        <section id="certifications" class="tab-content">
-            <h3>Based on your certification interests, we recommend</h3>
-            <div class="recommendations-carousel">
-                <div class="recommendation-card">
-                    <img src="java-course.jpg" alt="Java Certification">
-                    <h4>Oracle Certified Java Programmer</h4>
-                    <p>4.6 ★ (438)</p>
-                </div>
-                <div class="recommendation-card">
-                    <img src="other-course.jpg" alt="Other Certification">
-                    <h4>Java SE 8 Developer Bootcamp</h4>
-                    <p>4.6 ★ (9,726)</p>
-                </div>
-            </div>
-        </section>
+        </main>
     </div>
-</main>
 
-<!-- Folder Management Section -->
-<section class="folder-management">
-    <h3>Manage Your Learning Resources</h3>
-    <div class="folders">
-        <div class="folder">
-            <h4>Folder</h4>
-            <p>Java, Cloud Computing</p>
-        </div>
-</section>
-
-<!-- Footer Section -->
-<footer>
-    <p>Personalize your learning experience</p>
-    <a href="#">Add occupation and interests</a>
-</footer>
-
-<section class="course-section">
-    <h2>Upload</h2>
-
-    <!-- File Upload Form -->
-    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
-        <select id="course" name="course">
-            <!-- More courses can be added here -->
-        </select>
-
-        <label for="fileType">Select File Type:</label>
-        <select id="fileType" name="fileType">
-            <option value="document">Document</option>
-            <option value="image">Image</option>
-            <option value="video">Video</option>
-        </select>
-
-        <label for="file">Select File:</label>
-        <input type="file" id="file" name="file" accept="application/pdf, image/*, video/*" required>
-
-        <button type="submit">Upload File</button>
-    </form>
-
-    <!-- Uploaded Files List -->
-    <div class="uploaded-files">
-        <h3>Uploaded Files</h3>
-        <ul id="fileList"></ul>
-    </div>
-</section>
-
-<script src="upload.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
-<h3>phát triển bỡi Lương Hoài Sang</h3>
 </html>
