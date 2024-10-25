@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Computing Documents</title>
+    <title>Enhanced Learning Dashboard</title>
     <link rel="stylesheet" href="lab4_1.css">
 </head>
 <body>
-<!-- Header -->
-
+    <header>
+        <div class="navbar">
+            <h1>Lương Hoài Sang</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="lab1.html">Lab 1</a></li>
+                    <li><a href="lab2.html">Lab 2</a></li>
+                    <li><a href="lab3.html">Lab 3</a></li>
+                    <li><a href="lab4.html">Lab 4</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- nav-tabs -->
+<section>
     <nav>
         <ul class="nav-tabs">
-            <li><a href="lab4.html">Business Operations</a></li>
+            <li class="active-tab">Business Operations</li>
             <li><a href="lab4_1.html">Cloud Computing</a></li>
             <li><a href="lab4_2.html">Cybersecurity</a></li>
             <li><a href="lab4_3.html">Data Science</a></li>
@@ -22,35 +36,153 @@
         </ul>
     </nav>
 
-
-<header> 
-    <h1>Cloud Computing</h1>
-    <p>Upload and Access Cloud Computing Documents</p>
-</header> 
-
-<section class="upload-section">
-    <h2>Upload a Document</h2>
-
-    <!-- File Upload Form -->
-    <form id="uploadForm" action="/cloud-computing/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Select a Document:</label>
-        <input type="file" id="file" name="file" accept="application/pdf, application/msword" required>
-
-        <button type="submit">Upload Document</button>
-    </form>
+    
+    <div class="welcome-section">
+        <div class="profile-pic"></div>
+        <div class="welcome-text">
+            <h2>Welcome back, Luong Hoai Sang</h2>
+            <a href="#">Add occupation and interests</a>
+        </div>
+    </div>
 </section>
 
-<!-- List of Uploaded Documents -->
-<section class="document-section">
-    <h2>Available Cloud Computing Documents</h2>
-    <ul id="documentList">
-        <!-- Dynamically populated list of files -->
-    </ul>
+<!-- Weekly Streak Section -->
+<section class="weekly-streak">
+    <h3>Weekly streak</h3>
+    <p>One ring down, one to go. Keep it up!</p>
+    <div class="streak-details">
+       
+    </div>
+</section>
+
+<!-- Main Section with Tabs -->
+<main>
+    <!-- Tabs for switching between sections -->
+    <div class="tab-container">
+        <ul class="tab-list">
+            <li class="tab-item active" data-tab="courses">Courses</li>
+            <li class="tab-item active" data-tab="learning-paths">Learning Paths</li>
+            <li class="tab-item active" data-tab="certifications">Certification Preparation</li>
+        </ul>
+
+        <!-- Courses Section -->
+        <section id="courses" class="tab-content active">
+            <h3>Pick up where you left off</h3>
+            <div class="course-list">
+                <div class="course-card">
+                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 080821.png" alt="Ảnh chụp màn hình 2024-10-19 080821.png">
+                    <h4>Lập Trình Cho Người Mới</h4>
+                    <p>Lecture • 1m</p>
+                    <div class="course-actions">
+                        <a href="#" class="download-btn">Download Video</a>
+                        <a href="#" class="download-btn">Download Document</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 081255.png" alt="Course 2">
+                    <h4>Học Lập Trình Cùng Giảng Viên</h4>
+                    <p>Lecture • 6m left</p>
+                    <div class="course-actions">
+                        <a href="#" class="download-btn">Download Video</a>
+                        <a href="#" class="download-btn">Download Document</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        Learning Paths Section
+        <section id="learning-paths" class="tab-content">
+            <h3>welcome to learning-paths</h3>
+            <div class="course-list">
+                <div class="course-card">
+                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 080821.png" alt="Ảnh chụp màn hình 2024-10-19 080821.png">
+                    <h4>Lập Trình Cho Người Mới</h4>
+                    <p>Lecture • 1m</p>
+                    <div class="course-actions">
+                        <a href="#" class="download-btn">Download Video</a>
+                        <a href="#" class="download-btn">Download Document</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="c:\Users\Admin\Pictures\Screenshots\Ảnh chụp màn hình 2024-10-19 081255.png" alt="Course 2">
+                    <h4>Học Lập Trình Cùng Giảng Viên</h4>
+                    <p>Lecture • 6m left</p>
+                    <div class="course-actions">
+                        <a href="#" class="download-btn">Download Video</a>
+                        <a href="#" class="download-btn">Download Document</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <!-- Certification Preparation Section -->
+        <section id="certifications" class="tab-content">
+            <h3>Based on your certification interests, we recommend</h3>
+            <div class="recommendations-carousel">
+                <div class="recommendation-card">
+                    <img src="java-course.jpg" alt="Java Certification">
+                    <h4>Oracle Certified Java Programmer</h4>
+                    <p>4.6 ★ (438)</p>
+                </div>
+                <div class="recommendation-card">
+                    <img src="other-course.jpg" alt="Other Certification">
+                    <h4>Java SE 8 Developer Bootcamp</h4>
+                    <p>4.6 ★ (9,726)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Folder Management Section -->
+<section class="folder-management">
+    <h3>Manage Your Learning Resources</h3>
+    <div class="folders">
+        <div class="folder">
+            <h4>Folder</h4>
+            <p>Java, Cloud Computing</p>
+        </div>
+</div></section>
+
+<!-- Footer Section -->
+<footer>
+    <p>Personalize your learning experience</p>
+    <a href="#">Add occupation and interests</a>
+</footer>
+
+<section class="course-section">
+    <h2>Upload</h2>
+
+    <!-- File Upload Form -->
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <select id="course" name="course">
+            <!-- More courses can be added here -->
+        </select>
+
+        <label for="fileType">Select File Type:</label>
+        <select id="fileType" name="fileType">
+            <option value="document">Document</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+        </select>
+
+        <label for="file">Select File:</label>
+        <input type="file" id="file" name="file" accept="application/pdf, image/*, video/*" required="">
+
+        <button type="submit">Upload File</button>
+    </form>
+
+    <!-- Uploaded Files List -->
+    <div class="uploaded-files">
+        <h3>Uploaded Files</h3>
+        <ul id="fileList"></ul>
+    </div>
 </section>
 
 <script src="upload.js"></script>
-</body>
-</html>
-</html>
+
+
 <h3>phát triển bỡi Lương Hoài Sang</h3>
-</html>
+
+</body></html>
