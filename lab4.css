@@ -1,194 +1,154 @@
-/* Tổng quan */
-body {
+
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #111;
-    color: white;
-    padding: 10px;
+body {
+    background-color: #f4ecec;
+    color: #000000;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Navbar */
+/* Navigation Bar */
 .navbar {
-    background-color: #000;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: white;
-}
-
-/* Sidebar */
-#sidebar {
     background-color: #111;
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    padding-top: 20px;
-    color: white;
-}
-
-#sidebar ul {
-    padding-left: 0;
-    list-style-type: none;
-}
-
-#sidebar .sidebar-link {
+    overflow: hidden;
     color: white;
     padding: 10px 20px;
-    display: block;
-    text-decoration: none;
 }
 
-#sidebar .sidebar-link:hover {
-    background-color: #333;
-    border-left: 5px solid red;
-}
-
-#sidebar .has-dropdown::after {
-    content: '\f078';
-    font-family: FontAwesome;
+.navbar a {
     float: right;
-}
-
-#sidebar .collapsed .has-dropdown::after {
-    content: '\f077';
-}
-
-/* Sidebar toggle button */
-.toggle-btn {
-    background-color: #111;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.toggle-btn:hover {
-    background-color: #333;
-}
-
-.sidebar-logo a {
     color: white;
     text-decoration: none;
-    display: block;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar h1 {
+    float: left;
+}
+
+.streak, .learning, .recommendations, .personalize {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.weekly-streak {
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Căn chỉnh biểu tượng và văn bản */
+.streak i, .progress i, .week i, .current-streak i {
+    margin-left: 8px; /* Khoảng cách giữa văn bản và biểu tượng */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+  }
+  
+  /* Thêm phong cách cho biểu tượng trong các liên kết hoạt động */
+  .activity-link i {
+    margin-left: 5px;
+  }
+  
+  /* Tùy chỉnh màu sắc và kích thước biểu tượng */
+  .fa-calendar-alt, .fa-bell, .fa-fire, .fa-trophy, .fa-book, .fa-check-circle, .fa-arrow-right {
+    color: #e60000; /* Màu sắc biểu tượng */
+    font-size: 16px; /* Kích thước biểu tượng */
+  }
+  
+  
+
+
+/* Image and Video Section */
+.image-container, .video-container {
     text-align: center;
     margin: 20px 0;
 }
 
-.sidebar-logo a:hover {
-    text-decoration: underline;
+.image-container img, .video-container video {
+    width: 500px;
+    height: auto;
 }
-
-/* Main content */
-.main {
-    margin-left: 250px;
-    padding: 20px;
-}
-
-.main h1, .main h2 {
-    color: #333;
-}
-
-/* Video section */
-.video-section iframe {
+personalize-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px 0 ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0; /* Thêm dòng này để căn giữa */
+    
 }
 
-/* Course Content */
-.course-header .ratings {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+.personalize-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.course-header .ratings i {
-    color: gold;
+.personalize-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
 }
 
-.course-header .ratings span {
-    margin-right: 15px;
-    font-size: 18px;
+.personalize-btn {
+    background-color: #000;color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.course-header .details p {
-    margin: 0;
-    color: gray;
-    font-size: 14px;
+.personalize-btn:hover {
+    background-color: #333;
 }
 
-.course-content ul {
-    list-style-type: none;
-    padding: 0;
+@media (max-width: 768px) {
+    .course, .recommend-card {
+        width: calc(50% - 10px);
+    }
 }
 
-.course-content li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .course, .recommend-card {
+        width: 100%;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current-streak, .progress {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-.course-content li i {
-    color: green;
-    margin-right: 10px;
-}
 
-/* Footer */
+/* Footer Section */
 footer {
-    background-color: #000;
+    background-color: #111;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .main {
-        margin-left: 0;
-    }
-
-    #sidebar {
-        position: relative;
-        height: auto;
-        width: 100%;
-    }
 }
