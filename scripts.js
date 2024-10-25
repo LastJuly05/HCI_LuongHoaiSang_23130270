@@ -1,6 +1,10 @@
-// scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    const hamBurger = document.querySelector(".toggle-btn");
 
-function viewMaterials(topic) {
-    alert(`Viewing materials for: ${topic}`);
-    // Chỗ này bạn có thể thay bằng hành động cụ thể, ví dụ chuyển hướng tới trang chi tiết tài liệu.
-}
+    hamBurger.addEventListener("click", function () {
+        const sidebar = document.querySelector("#sidebar");
+
+        // Thêm/tắt lớp 'expand' cho sidebar
+        sidebar.classList.toggle("expand");
+    });
+});

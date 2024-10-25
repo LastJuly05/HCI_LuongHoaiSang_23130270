@@ -1,0 +1,115 @@
+/* Tổng quan về kiểu chữ và bố cục */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Kiểu cho phần tử thân trang */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Định dạng thanh điều hướng */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-tabs li {
+    margin: 0 15px;
+}
+
+.nav-tabs a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-tabs a:hover {
+    background-color: #555;
+}
+
+/* Định dạng tiêu đề */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Định dạng phần tải lên tài liệu */
+.upload-section, .document-section {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h2, .document-section h2 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.upload-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-section input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.upload-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Định dạng danh sách tài liệu */
+.document-section ul {
+    list-style-type: none;
+}
+
+.document-section li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Định dạng chân trang */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer h3 {
+    margin: 0;
+}
