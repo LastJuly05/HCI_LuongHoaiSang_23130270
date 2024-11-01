@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studies</title>
+    <link rel="stylesheet" href="lab2.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Lương Hoài Sang</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="lab1.html">Lab 1</a></li>
+                    <li><a href="lab2.html">Lab 2</a></li>
+                    <li><a href="lab3.html">Lab 3</a></li>
+                    <li><a href="lab4.html">Lab 4</a></li>
+                    <li><a href="lab5.html">Lab 5</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="loginContainer">
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+            <input type="text" id="username" name="username" placeholder="Tên đăng nhập hoặc Email" required>
+            <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <p><a href="#">Quên mật khẩu?</a></p>
+        <p>Chưa có tài khoản? <a href="#" id="showRegisterForm">Tạo tài khoản</a></p>
+    </div>
+
+    <div class="container" id="registerContainer" style="display: none;">
+        <h2>Tạo tài khoản</h2>
+        <form id="registerForm">
+            <input type="text" id="fullName" name="fullName" placeholder="Họ tên" required>
+            <input type="date" id="dob" name="dob" required>
+            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" required>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Giới tính</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select>
+            <input type="text" id="newUsername" name="newUsername" placeholder="Tên đăng nhập" required>
+            <input type="password" id="newPassword" name="newPassword" placeholder="Mật khẩu" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+            <button type="submit">Tạo tài khoản</button>
+        </form>
+        <p>Đã có tài khoản? <a href="#" id="showLoginForm">Đăng nhập</a></p>
+    </div>
+
+    <script>
+        const loginContainer = document.getElementById('loginContainer');
+        const registerContainer = document.getElementById('registerContainer');
+        const showRegisterForm = document.getElementById('showRegisterForm');
+        const showLoginForm = document.getElementById('showLoginForm');
+
+        showRegisterForm.addEventListener('click', function() {
+            loginContainer.style.display = 'none';
+            registerContainer.style.display = 'block';
+        });
+
+        showLoginForm.addEventListener('click', function() {
+            registerContainer.style.display = 'none';
+            loginContainer.style.display = 'block';
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (newPassword !== confirmPassword) {
+                alert('Mật khẩu xác nhận không khớp!');
+                return;
+            }
+
+            alert('Tạo tài khoản thành công!');
+            registerContainer.style.display = 'none';
+            loginContainer.style.display = 'block';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Đăng nhập thành công!');
+        });
+    </script>
+</body>
+</html>

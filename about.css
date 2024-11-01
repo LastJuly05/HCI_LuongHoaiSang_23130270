@@ -1,0 +1,110 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+        background: url() no-repeat center center/cover;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.navbar h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f0a500;
+}
+/* About Section */
+.about-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.info {
+    text-align: left;
+}
+
+.info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info ul {
+    list-style: none;
+}
+
+.info ul li {
+    margin-bottom: 10px;
+}
+
+.info ul li strong {
+    color: #007bff;
+}

@@ -1,0 +1,194 @@
+/* Tổng quan */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    color: white;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #111;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    color: white;
+}
+
+#sidebar ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#sidebar .sidebar-link {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar .sidebar-link:hover {
+    background-color: #333;
+    border-left: 5px solid red;
+}
+
+#sidebar .has-dropdown::after {
+    content: '\f078';
+    font-family: FontAwesome;
+    float: right;
+}
+
+#sidebar .collapsed .has-dropdown::after {
+    content: '\f077';
+}
+
+/* Sidebar toggle button */
+.toggle-btn {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #333;
+}
+
+.sidebar-logo a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sidebar-logo a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+.main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.main h1, .main h2 {
+    color: #333;
+}
+
+/* Video section */
+.video-section iframe {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Course Content */
+.course-header .ratings {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.course-header .ratings i {
+    color: gold;
+}
+
+.course-header .ratings span {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.course-header .details p {
+    margin: 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.course-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.course-content li i {
+    color: green;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+    }
+
+    #sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+}

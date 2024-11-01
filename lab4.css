@@ -1,0 +1,37 @@
+
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4ecec;
+    color: #000000;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #111;
+    overflow: hidden;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    float: right;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar h1 {
+    float: left;
+}
+

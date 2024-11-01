@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="lab1.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Lương Hoài Sang</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="lab1.html">Lab 1</a></li>
+                    <li><a href="lab2.html">Lab 2</a></li>
+                    <li><a href="lab3.html">Lab 3</a></li>
+                    <li><a href="lab4.html">Lab 4</a></li>
+                    <li><a href="lab5.html">Lab 5</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-section">
+        <div class="form-container">
+            <h1>Create Account</h1>
+            <form action="submit_lab1.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" class="gender-label">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="gender-label">Female</label>
+
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other" class="gender-label">Other</label>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

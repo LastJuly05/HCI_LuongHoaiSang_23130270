@@ -1,0 +1,198 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('images/backgoundlab5.png') no-repeat center center/cover;
+    color: #fff;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.navbar h1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f0a500;
+}
+
+/* Navbar phụ - Khác biệt so với Header */
+.navbar1 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    background-color: #f5f5f5; /* Nền xám nhạt */
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar1 button {
+    background-color: #333; /* Nút màu đen */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Định dạng liên kết thành nút */
+.button-link {
+    display: inline-block;
+    background-color: #333;  /* Nền đen */
+    color: white;            /* Chữ trắng */
+    padding: 10px 20px;
+    text-decoration: none;   /* Loại bỏ gạch chân */
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #555;  /* Nền xám đậm khi hover */
+    color: #f0a500;          /* Chữ màu vàng nhạt khi hover */
+}
+.navbar1 button:hover {
+    background-color: #555; /* Xám đậm khi hover */
+    color: #f0a500; /* Chữ màu vàng nhạt khi hover */
+}
+
+/* Thanh lọc và các nút */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f9f9f9; /* Nền trắng */
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-options {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-options button {
+    background-color: #e6e6e6; /* Nút màu xám nhạt */
+    color: #333; /* Chữ đậm hơn */
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-options button:hover {
+    background-color: #d4d4d4; /* Đổi màu khi hover */
+}
+
+.filter-bar input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Phần khóa học với background chìm */
+.courses-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(240, 240, 240, 0.9)); /* Gradient nhạt hơn */
+    border-radius: 10px;
+}
+
+/* Định dạng các thẻ khóa học */
+.course-item {
+    background-color: #ffffff; /* Màu nền trắng cho các thẻ */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.course-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ hơn */
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Nội dung khóa học */
+.course-info {
+    padding: 10px;
+}
+
+.course-info h3 {
+    font-size: 1em;
+    color: #333; /* Màu chữ đậm hơn */
+    margin-bottom: 5px;
+}
+
+.course-info p {
+    font-size: 0.9em;
+    color: #666; /* Màu chữ trung bình */
+}
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111; /* Nền đen */
+    color: #fff; /* Chữ trắng */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #444;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #f0a500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
