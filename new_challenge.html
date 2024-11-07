@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Challenge</title>
+    <link rel="stylesheet" href="new_challenge.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Create New Challenge</h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="form-section">
+            <h2>New unit test custom challenge</h2>
+            <form>
+                <label for="challenge-name">Challenge Name:</label>
+                <input type="text" id="challenge-name" name="challenge-name" value="Demo" required><br>
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select><br>
+                <label for="description">Short description:</label>
+                <input type="text" id="description" name="description" placeholder="[Optional short description about this challenge...]"><br>
+                <button type="button" onclick="showEditSection()">Click here to open the Java (JUnit) IDE and edit your code</button>
+            </form>
+        </div>
+
+        <div id="edit-section" style="display: none;">
+            <h2>Edit Custom Challenge</h2>
+            <textarea id="problem-statement" name="problem-statement" placeholder="Text..."></textarea><br>
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Enter your notes here..."></textarea><br>
+            <div class="divider">
+                Required Test Cases
+              </div>          
+              <div class="form-group">
+                <label for="input-type">Input type:</label>
+                <select id="input-type">
+                  <option value="array">Array of integers</option>
+                  <option value="string">String</option>
+                  <option value="integer">Integer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="output-type">Output type:</label>
+                <select id="output-type">
+                  <option value="integer">Integer</option>
+                  <option value="string">String</option>
+                  <option value="array">Array</option>
+                </select>
+              </div>
+            <table>          
+                <tbody>
+                    <tr>
+                        <td>[12, 31, 25, 17, 40, 10, 29]</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>[0]</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>[1]</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>[0, 2, 4, 6, 8, 10]</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>[1, 3, 5]</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>[8, 8, 8, 8, 8, 8, 8, 8, 8, 8]</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn">Update custom challenge</button>
+        </div>
+        
+<script>
+    function showEditSection() {
+        document.getElementById('edit-section').style.display = 'block';
+    }
+</script>
+</body>
+
